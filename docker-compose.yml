@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:16
     container_name: eventos-db
+    image: postgres:14
     restart: always
     environment:
       POSTGRES_DB: eventos
