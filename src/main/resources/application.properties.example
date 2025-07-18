@@ -1,0 +1,14 @@
+spring.application.name=
+
+# DB
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+spring.jpa.show-sql=true
+spring.flyway.locations=
+
+# AWS
+aws.access-key-id=
+aws.secret-access-key=
+aws.region=
+aws.bucket.name=
