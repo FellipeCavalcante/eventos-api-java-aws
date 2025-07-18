@@ -1,9 +1,7 @@
 package com.evento.api.domain.event;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.evento.api.domain.address.Address;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
@@ -11,8 +9,8 @@ import java.util.UUID;
 
 @Table(name = "event")
 @Entity
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Event {
@@ -25,4 +23,9 @@ public class Event {
     private String eventUrl;
     private Boolean remote;
     private Date date;
+
+    @OneToOne(mappedBy = "event", cascade = CascadeType.ALL)
+    private Address address;
 }
+
+
