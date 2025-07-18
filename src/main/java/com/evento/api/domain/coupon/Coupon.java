@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name = "event-coupon")
+@Table(name = "coupon")
 @Setter
 @Getter
 @NoArgsConstructor
@@ -20,6 +20,7 @@ public class Coupon {
     @Id
     @GeneratedValue
     private UUID id;
+    private String code;
     private Integer discount;
     private Date valid;
 
